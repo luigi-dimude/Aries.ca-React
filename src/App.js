@@ -17,6 +17,7 @@ import PageNotFound from './components/pages/PageNotFound';
 
 // Components
 import Jobs from './components/jobs/Jobs';
+import Documentation from './components/Documentation';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import UserJobs from './components/UserJobs/UserJobs';
@@ -55,6 +56,7 @@ function App() {
          <Route exact path='/userJobs/add' element={<AddJob/>} />
          <Route exact path='/userJobs/edit/:id' element={<EditJob/>} />
          <Route exact path='/userJobs/delete/:id' element={<DeleteJob/>} />
+         <Route exact path='/documentation' element={<Documentation/>}/>
 
          <Route path='*' element={<PageNotFound/>} />
        </Routes>
