@@ -13,7 +13,9 @@ export const Documentation = () => {
   }, []);
 
   return (
-    <div></div>
+    <div>
+      <a href="https://jobs-api-arie.herokuapp.com/api-docs/">Docs</a>
+    </div>
   )
 }
 
