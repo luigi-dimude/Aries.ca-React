@@ -650,6 +650,11 @@ select {
 display: block;
 text-align: center;
 }
+
+.login__card {
+  width: 80%;
+  max-width: unset;
+}
 }
 
 @media only screen and (max-width: 770px) {
