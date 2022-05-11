@@ -100,7 +100,7 @@ else {
             return(
               <li className='userJobs__li'  key={job._id}>
                 <div className="userJobs__card">
-                  <h1>{`${job.title.charAt(0).toUpperCase()}${job.title.substring(1,10)}`}</h1>
+                  <h1>{`${job.title.charAt(0).toUpperCase()}${job.title.substring(1)}`}</h1>
                   <h1 className='userJobs__hourlySalry'>${job.hourlySalary} <span className='userJobs__perHour'>/hr</span></h1>
                   <div className="userJobs__jobDetails">
                   <p><span className='userJobs__head'>Start Date :</span> {job.startDate.substring(0,10)}</p>

@@ -121,7 +121,7 @@ const {title, hourlySalary, companyName, startDate,
         <>    
           <Navbar/>
     
-          <div className="userJobs__container">
+          <div className=" deleteUser__container">
           <div className='container mt mb'>
           
           {  

@@ -115,6 +115,13 @@ select {
   .mb-2 {
     margin-bottom: 2em;
   }
+  .mb-1 {
+    margin-bottom: 1em;
+  }
+  .mt-1 {
+    margin-top: 1em;
+  }
+ 
 
 /* Navbar */
 .navbar {
@@ -240,6 +247,14 @@ select {
     width: 100%;
     display: flex;
     justify-content: space-between;
+  }
+
+  #display__jobs-mobile {
+    display: none;
+  }
+
+  .display__jobs {
+    display: block;
   }
 
   .jobs__list {
@@ -477,9 +492,24 @@ select {
   width: 100%;
   font-size: 1.1em;
   color: #333;
-  font-weight: 500;
+  font-weight: 400;
   border: none;
   outline: none;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.text-area {
+  background-color: #F2F2F2;
+  border-radius: 7px;
+  padding: 10px 12px;
+  width: 100%;
+  font-size: 1.2em;
+  color: #333;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 /* User Jobs */
@@ -569,6 +599,9 @@ select {
 .userJobs__container {
   height: calc(100vh - 202px);
 }
+.deleteUser__container {
+  margin-bottom: 24em;
+}
 .userJobs__card-delete {
   max-width: 120%;
   background-color: #FFF;
@@ -594,12 +627,136 @@ select {
   margin-top: auto;
 }
 
-/* Laptop view */
-@media only screen and (max-width: 1445px) {
+/* Tablet */
+@media only screen and (max-width: 1000px) {
+  #display__jobs-mobile {
+    display: block;
+  }
 
-  .deleteUser__container {
-    height: calc(100vh - 100px);
-    margin-bottom: 2em;
+  #display__jobs {
+    display: none;
+  }
+  .jobs__card {
+    cursor:unset;
+  }
+  .jobs__card:hover {
+
+    border: 1px solid #dedbdb;
+  }
+  .jobs__card:hover .jobs__title {
+    text-decoration: none;
+  }
+.create__job {
+display: block;
+text-align: center;
+}
+}
+
+@media only screen and (max-width: 770px) {
+  .navbar__logo {
+    width: 150px;
+    margin-top: 5px;
+}
+
+.navbar__link {
+  font-size: 1em;
+}
+
+.navbar__user {
+  font-size: 1em;
+  /* margin-top: .1em; */
+}
+
+.search__card {
+  min-width: 600px;
+}
+.search__bar {
+  width: 100%;
+}
+
+.search__select-container {
+  flex-direction: column;
+}
+.navbar {
+  height: 120px;
+  padding: 10px 0;
+}
+.navbar__container {
+  flex-direction: column;
+  justify-content:space-between;
+  /* padding: 50px 0;   */
+}
+
+}
+
+@media only screen and (max-width: 632px) {
+
+  .search__card {
+    min-width: 400px;
+
+  }
+  #display__jobs-mobile {
+    display: flex;
+  
+    flex-direction: column;
+    align-items: center;
+  }
+  .jobs__card {
+    max-width: 80%;
+
+  }
+
+
+}
+/* Large Mobile or small Tablets */
+@media only screen and (max-width: 500px) {
+
+.navbar {
+  height: 170px;
+}
+.navbar__ul {
+  flex-direction: column;
+  text-align: center;
+}
+
+.navbar__user {
+  margin-bottom: .4em;
+}
+.jobs__card {
+  max-width: 90%;
+}
+.search__card {
+  min-width: 387px;
+}
+
+.form-text2 {
+  font-size: 1em;
+}
+.text-area {
+  font-size: 1em;
+}
+
+}
+
+
+@media only screen and (max-width: 400px) {
+  .search__card {
+    min-width: 324px;
+  }
+
+  body {
+    font-size: 94%;
   }
 }
 
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 90%;
+  }
+  .search__card {
+    min-width: 306px;
+  }
+  .jobs__card {
+    max-width: 100%;
+  }
+}

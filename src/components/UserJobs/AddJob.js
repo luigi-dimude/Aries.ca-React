@@ -158,7 +158,7 @@ const AddJob = () => {
                 </div>
                 <div className="form-group">
                     <label>Description : </label>
-                    <input className="form-text2" name="description" value={description} onChange={handleChange} type="text" required />
+                    <textarea className="text-area" name="description" value={description} onChange={handleChange} type="text" rows='7' required />
                 </div>
                 <div className="form-group">
                     <label>Street Location : </label>

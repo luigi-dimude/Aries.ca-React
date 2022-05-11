@@ -96,7 +96,8 @@ const DisplayJobs = () => {
 
   else {
     return (
-      <div className='container mt'>
+      <>
+      <div id='display__jobs' className='container mt'>
         <div className="jobs__container">
           <div className="jobs__list">
             {fetchedJobs.map( job => {
@@ -123,8 +124,8 @@ const DisplayJobs = () => {
                     <p>{singleJob.contactEmail !== 'n/a' && singleJob.contactEmail}</p>
                   </div>
                   <h4 className='jobs__detail-companyName'>{singleJob.companyName !== 'n/a' && singleJob.companyName}</h4>
-                  <h4 className='jobs__detail-duration'>{singleJob.duration !== 'n/a' && singleJob.duration}</h4>
-                  <h4 className='jobs__detail-startDate'>{singleJob.startDate.substring(0,10)}</h4>
+                  <h4 className='jobs__detail-duration'>Duration: {singleJob.duration !== 'n/a' && singleJob.duration}</h4>
+                  <h4 className='jobs__detail-startDate'>Starts: {singleJob.startDate.substring(0,10)}</h4>
                   <div className="jobs__detail-address">
                     <p><strong>Province:</strong> {singleJob.address.province}</p>
                     <p><strong>Region:</strong> {singleJob.address.region}</p>
@@ -137,6 +138,26 @@ const DisplayJobs = () => {
           </div>
         </div>
       </div>
+
+      <div id="display__jobs-mobile" className="container mt">
+        {fetchedJobs.map(job => {
+          return(
+            <div className="jobs__card mb-2">
+              <h2 className='jobs__title'>{job.title}</h2>
+              <h4 className='jobs__salary'>${job.hourlySalary} <span className='jobs__perHour'>/hr</span></h4>
+              <h4 className='jobs__company'>{job.companyName !== 'n/a' && job.companyName}</h4>
+              <h4 className='jobs__details'>City: {job.address.city}</h4>
+              <h4 className='jobs__details'>Street: {job.streetLocation}</h4>
+              <h4 className='jobs__details'>Start Date: {job.startDate.substring(0,10)}</h4>
+              <h4 className='jobs__details jobs__duration'>{job.duration !== 'n/a' && job.duration}</h4>
+              <h4 className='jobs__details mt-1'><strong>{job.contactPhoneNumber}</strong></h4>
+              <h4 className='jobs__details mb-1'><strong>{job.contactEmail}</strong></h4>
+              <p>{job.description}</p>
+            </div>
+          )
+        })}
+      </div>
+      </>
     )
   }
 }
